@@ -1,0 +1,48 @@
+
+> nextn@0.1.0 typecheck
+> tsc --noEmit
+
+src/app/dashboard/distributor/page.tsx(386,29): error TS2367: This comparison appears to be unintentional because the types '"Expired" | "Pending" | "Rejected" | "Approved" | "At-Pharmacy" | "Sold" | "Recalled"' and '"Delivered"' have no overlap.
+src/app/dashboard/logistics/page.tsx(69,48): error TS2367: This comparison appears to be unintentional because the types 'BatchStatus' and '"Delivered"' have no overlap.
+src/app/dashboard/logistics/page.tsx(193,53): error TS2345: Argument of type '"Delivered"' is not assignable to parameter of type 'BatchStatus'.
+src/app/dashboard/logistics/page.tsx(216,53): error TS2345: Argument of type '"Delivered"' is not assignable to parameter of type 'BatchStatus'.
+src/app/dashboard/regulator/page.tsx(90,46): error TS2367: This comparison appears to be unintentional because the types 'BatchStatus' and '"Flagged"' have no overlap.
+src/app/dashboard/regulator/page.tsx(91,103): error TS2367: This comparison appears to be unintentional because the types '"Expired" | "Pending" | "Rejected" | "At-Pharmacy" | "Sold" | "Recalled"' and '"Delivered"' have no overlap.
+src/app/dashboard/regulator/page.tsx(100,107): error TS2367: This comparison appears to be unintentional because the types '"Expired" | "In-Transit" | "At-Pharmacy" | "Sold" | "Recalled"' and '"Blocked"' have no overlap.
+src/app/dashboard/regulator/page.tsx(160,30): error TS2367: This comparison appears to be unintentional because the types 'BatchStatus' and '"Flagged"' have no overlap.
+src/app/dashboard/regulator/page.tsx(172,70): error TS2367: This comparison appears to be unintentional because the types 'BatchStatus' and '"Flagged"' have no overlap.
+src/app/dashboard/regulator/page.tsx(251,13): error TS2322: Type 'number' is not assignable to type 'string'.
+src/app/dashboard/regulator/page.tsx(749,18): error TS2367: This comparison appears to be unintentional because the types 'BatchStatus | undefined' and '"Flagged"' have no overlap.
+src/app/dashboard/regulator/page.tsx(752,18): error TS2367: This comparison appears to be unintentional because the types 'BatchStatus | undefined' and '"Flagged"' have no overlap.
+src/app/dashboard/regulator/page.tsx(773,60): error TS2367: This comparison appears to be unintentional because the types 'BatchStatus | undefined' and '"Flagged"' have no overlap.
+src/app/dashboard/regulator/page.tsx(781,14): error TS2367: This comparison appears to be unintentional because the types 'BatchStatus | undefined' and '"Flagged"' have no overlap.
+src/app/dashboard/regulator/page.tsx(816,21): error TS2367: This comparison appears to be unintentional because the types 'BatchStatus | undefined' and '"Flagged"' have no overlap.
+src/components/dashboard/blockchain-audit-trail.tsx(66,16): error TS2339: Property 'DELIVERED' does not exist on type 'typeof BatchStatus'.
+src/contexts/batches-context.tsx(111,11): error TS2353: Object literal may only specify known properties, and 'type' does not exist in type 'Omit<Notification, "id" | "timestamp" | "read">'.
+src/contexts/batches-context.tsx(204,44): error TS2554: Expected 0 arguments, but got 1.
+src/contexts/batches-context.tsx(261,7): error TS2554: Expected 6-7 arguments, but got 5.
+src/contexts/batches-context.tsx(270,25): error TS2345: Argument of type 'Batch' is not assignable to parameter of type '{ batch: { name: string; id: string; status: string; mfg: string; exp: string; qty: number; history: { timestamp: string; status: string; location: string; }[]; manufacturer?: string | undefined; }; currentDate?: string | undefined; }'.
+  Property 'batch' is missing in type 'Batch' but required in type '{ batch: { name: string; id: string; status: string; mfg: string; exp: string; qty: number; history: { timestamp: string; status: string; location: string; }[]; manufacturer?: string | undefined; }; currentDate?: string | undefined; }'.
+src/contexts/batches-context.tsx(271,23): error TS2339: Property 'length' does not exist on type '{ isAnomaly: boolean; anomalies: { id: string; type: "pattern" | "temperature" | "location" | "time_delay" | "status_regression" | "quantity" | "expiry"; batchId: string; title: string; ... 5 more ...; affectedStage: string; }[]; overallRiskScore: number; analysisNotes: string; }'.
+src/contexts/batches-context.tsx(272,40): error TS2339: Property 'length' does not exist on type '{ isAnomaly: boolean; anomalies: { id: string; type: "pattern" | "temperature" | "location" | "time_delay" | "status_regression" | "quantity" | "expiry"; batchId: string; title: string; ... 5 more ...; affectedStage: string; }[]; overallRiskScore: number; analysisNotes: string; }'.
+src/contexts/batches-context.tsx(275,21): error TS2339: Property 'forEach' does not exist on type '{ isAnomaly: boolean; anomalies: { id: string; type: "pattern" | "temperature" | "location" | "time_delay" | "status_regression" | "quantity" | "expiry"; batchId: string; title: string; ... 5 more ...; affectedStage: string; }[]; overallRiskScore: number; analysisNotes: string; }'.
+src/contexts/batches-context.tsx(275,29): error TS7006: Parameter 'anomaly' implicitly has an 'any' type.
+src/contexts/batches-context.tsx(277,15): error TS2561: Object literal may only specify known properties, but 'batch_id' does not exist in type 'AnomalyDetection'. Did you mean to write 'batchId'?
+src/contexts/batches-context.tsx(286,41): error TS2345: Argument of type '{ isAnomaly: boolean; anomalies: { id: string; type: "pattern" | "temperature" | "location" | "time_delay" | "status_regression" | "quantity" | "expiry"; batchId: string; title: string; ... 5 more ...; affectedStage: string; }[]; overallRiskScore: number; analysisNotes: string; }' is not assignable to parameter of type 'string'.
+src/contexts/batches-context.tsx(336,13): error TS2554: Expected 6-7 arguments, but got 5.
+src/contexts/batches-context.tsx(350,9): error TS2353: Object literal may only specify known properties, and 'type' does not exist in type 'Omit<Notification, "id" | "timestamp" | "read">'.
+src/lib/analytics/data-processor-simple.ts(26,10): error TS2367: This comparison appears to be unintentional because the types 'BatchStatus' and '"Delivered"' have no overlap.
+src/lib/analytics/data-processor-simple.ts(47,47): error TS2367: This comparison appears to be unintentional because the types 'BatchStatus' and '"Blocked"' have no overlap.
+src/lib/analytics/data-processor-simple.ts(67,50): error TS2367: This comparison appears to be unintentional because the types 'BatchStatus' and '"Flagged"' have no overlap.
+src/lib/analytics/data-processor-simple.ts(105,18): error TS2367: This comparison appears to be unintentional because the types 'BatchStatus' and '"Delivered"' have no overlap.
+src/lib/analytics/data-processor-simple.ts(168,18): error TS2367: This comparison appears to be unintentional because the types '"Expired" | "Rejected" | "Approved" | "At-Pharmacy" | "Sold" | "Recalled"' and '"Delivered"' have no overlap.
+src/lib/analytics/data-processor-simple.ts(172,18): error TS2367: This comparison appears to be unintentional because the types '"Expired" | "Rejected" | "At-Pharmacy" | "Sold" | "Recalled"' and '"Blocked"' have no overlap.
+src/lib/analytics/data-processor.ts(59,47): error TS2367: This comparison appears to be unintentional because the types 'BatchStatus' and '"Blocked"' have no overlap.
+src/lib/analytics/data-processor.ts(79,52): error TS2367: This comparison appears to be unintentional because the types 'BatchStatus' and '"Flagged"' have no overlap.
+src/lib/analytics/data-processor.ts(271,18): error TS2367: This comparison appears to be unintentional because the types '"Expired" | "Rejected" | "Approved" | "At-Pharmacy" | "Sold" | "Recalled"' and '"Delivered"' have no overlap.
+src/lib/analytics/data-processor.ts(275,18): error TS2367: This comparison appears to be unintentional because the types '"Expired" | "Rejected" | "At-Pharmacy" | "Sold" | "Recalled"' and '"Blocked"' have no overlap.
+src/lib/analytics/data-processor.ts(309,18): error TS2367: This comparison appears to be unintentional because the types '"Expired" | "Pending" | "Rejected" | "In-Transit" | "At-Pharmacy" | "Sold" | "Recalled"' and '"Flagged"' have no overlap.
+src/lib/analytics/data-processor.ts(309,48): error TS2367: This comparison appears to be unintentional because the types '"Expired" | "Pending" | "Rejected" | "In-Transit" | "At-Pharmacy" | "Sold" | "Recalled"' and '"Blocked"' have no overlap.
+src/lib/analytics/data-processor.ts(453,59): error TS2367: This comparison appears to be unintentional because the types 'BatchStatus' and '"Delivered"' have no overlap.
+src/lib/blockchain/audit-trail.ts(87,22): error TS2339: Property 'DELIVERED' does not exist on type 'typeof BatchStatus'.
+src/lib/blockchain/audit-trail.ts(138,22): error TS2339: Property 'DELIVERED' does not exist on type 'typeof BatchStatus'.

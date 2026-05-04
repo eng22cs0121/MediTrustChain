@@ -1,0 +1,51 @@
+# Hardhat files
+artifacts/
+cache/
+dist/
+typechain-types/
+
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+build/
+dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Deployment records
+deployments/
+.deployments
+
+# Ignition modules (optional)
+.ignition/
+
+# Hardhat local node
+.hardhat/
+
+# MacOS
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
